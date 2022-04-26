@@ -1,0 +1,301 @@
+
+/* GENERAL STYLES */
+*{
+    color: hsl(0, 0%, 100%);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(218, 28%, 13%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400, 700;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+}
+header,h1,h3,h6,nav{
+    font-family: 'Raleway', sans-serif
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    width: 15%;
+    height: 40px;
+    border-radius: 50px;
+    background: hsl(198, 60%, 50%);
+    border: none;
+}
+button:hover{
+  background:hsl(176, 68%, 64%) ;
+}
+
+
+/* HEADER */
+.nav-bar{
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+.nav-bar a:hover{
+    font-weight: bolder;
+    padding-bottom: 5px;
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+/* INTRO */
+.intro{
+    
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+.get-started{
+    margin-bottom: 100px;
+}
+.features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    align-items: baseline;
+    margin: 70px 100px 100px 100px;
+}
+.features>div{
+    margin-bottom: 50px;
+    padding: 0 100px 0px 100px;
+}
+
+
+.productivity{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px 100px 100px 100px;
+    gap: 50px;
+    align-items: center;
+}
+.productivity .stay-productive{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: auto;
+    margin-left: auto;
+}
+.stay-productive h1{
+    font-size: 26px;
+}
+.stay-productive a {
+    color: hsl(176, 68%, 64%);
+    align-items: center;
+    width: fit-content;
+    font-size: 14px;
+    /* border-bottom: 1px solid; */
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+.stay-productive a:hover{
+    color: hsl(0, 0%, 100%);
+}
+.stay-productive a img {
+    margin-left: 0.85rem;
+}
+
+
+.testimonials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+.testimonials > div{
+    margin: 20px;
+    padding: 30px 30px 10px 30px;
+    text-align: left;
+    background: hsl(217, 28%, 15%);
+    box-shadow: 6px 6px 6px hsl(216, 53%, 10%);
+    border-radius: 3px;
+}
+.info img{
+    float: left;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.info h6{
+    margin-left: 50px;
+}
+.big-quote{
+    position: relative;
+    display: block;
+    top: 30px;
+    left: 110px;
+    z-index: -1;
+}
+
+
+.email-sign-up{
+    background: hsl(217, 28%, 15%);
+    box-shadow: 6px 6px 6px hsl(216, 53%, 10%);
+    clear: both;
+    width: 70%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px 80px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.email-sign-up input{
+    width: 65%;
+    color: black;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 26px;
+    border-color: white;
+    padding-left:40px;
+    margin: 20px ;
+    border: none;
+}
+
+
+footer{
+    background: hsl(216, 53%, 9%) ;
+    margin-top: -110px ;
+    padding: 150px 100px 30px 100px;
+    text-align: left;
+}
+.foot-desc{
+    display: grid;
+    grid-template-columns: 3fr 2fr 1.3fr 1.2fr 1.1fr;
+}
+.loc img{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    padding-top: 20px;
+}
+.foot-desc-1 img{
+    margin-right: 20px;
+    position: relative;
+    top: -40%;
+    transform: translateY(40%);
+}
+.foot-desc ul{
+    line-height: 50px;
+    margin-top: 0;
+}
+.fa{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.fa:hover{
+    color: hsl(176, 68%, 64%) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive part */
+@media screen and (max-width:375px) {
+    html, body, .intro{
+        width: 100vw;
+        margin: 0;
+        padding: 0%;
+        box-sizing: border-box;
+        display: block;
+        text-align: center;
+    }
+    .features, .productivity, .testimonials, .email-sign-up, .foot-desc{
+        display: block;
+        margin: 20px;
+    }
+    .nav-bar{
+        height: 60px;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .nav-bar img{
+        width: 60%;
+        padding-left: 10px;
+    }
+    .get-started,.productivity{
+        margin: 30px 30px 70px 30px;
+        text-align: center;
+    }
+    .get-started .svg, .productivity .svg{
+        width: 330px;
+    }
+    .get-started h1, .get-started p{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    .get-started button{
+        width: 220px;
+    }
+    .features, .productivity, .email-sign-up{
+        margin-top: 100px;
+    }
+    .features div{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .stay-productive{
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .productivity h1, .productivity p{
+        text-align: left;
+        font-size: 16px;
+    }
+    .big-quote{
+        left: 30px;
+    }
+    .email-sign-up{
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px 20px;
+    }
+    #email-signup, .email-sign-up button{
+        width: 100%;
+        margin: 10px;
+    }
+    footer{
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+    }
+    ul .foot-desc-1{
+        padding-left: 0;
+    }
+    .foot-desc ul{
+        line-height: 30px;
+        margin-top: 30px;
+        padding-left: 0;
+    }
+    .socials{
+        text-align: center;
+    }
+
+
+    
+}
